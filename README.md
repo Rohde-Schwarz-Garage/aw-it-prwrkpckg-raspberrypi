@@ -1,22 +1,22 @@
 # Raspberry Pi - Eine Einführung in die Welt der Minicomputer
 
-```csharp
-if (readDocuments.Contains("Einleitungsdokument")) {
-    continue;
-} else {
-    return;
-}
-```
+Diese Einführung ist Teil des [Pre-Work-Pakets](../../../collection-it-prwrkpckg).
 
 ## Inhaltsverzeichnis
 1. [Was ist ein Raspberry Pi?](#was-ist-ein-raspberry-pi)
 2. [Erste Schritte](#erste-schritte)
+    - [Material](#material)
+    - [Aufsetzen des Raspberry Pi](#aufsetzen-des-raspberry-pi)
 3. [Linux Grundlagen](#linux-grundlagen)
+    - [Linux Kernel](#linux-kernel)
     - [Terminal Basics](#terminal-basics)
     - [Root-Rechte](#root-rechte)
     - [Software verwalten](#software-verwalten)
     - [Ordnerstruktur](#ordnerstruktur)
 4. [SSH](#ssh)
+    - [IP-Adresse herausfinden](#ip-adresse-herausfinden)
+    - [Setup des SSH-Servers](#setup-des-ssh-servers)
+    - [Verbindungsaufbau](#verbindungsaufbau)
 
 ## Was ist ein Raspberry Pi?
 > Raspberry Pi is an affordable way to do something useful, or to do something fun.  
@@ -65,14 +65,18 @@ Das Betriebssystem, das du auf dem Raspberry Pi installiert hast, ist eine Linux
 Bei einem Kernel handelt es sich um den Kern des Betriebssystems. Er ist für die Zusammenarbeit von Hardware und Software verantwortlich. Der Linux Kernel ist, anders als beispielsweise der von Windows, open source.
 
 ### Terminal Basics
-Auch wenn die meisten Linux-Distributionen heute über eine grafische Benutzeroberfläche verfügen, ist für manche Aufgaben dennoch die Verwendung des Terminals nötig. Um dir hierbei den Einstieg zu vereinfachen, findest du im Folgenden eine Übersicht der wichtigsten Befehle im Terminal.
+Auch wenn die meisten Linux-Distributionen heute über eine grafische Benutzeroberfläche verfügen, ist für manche Aufgaben dennoch die Verwendung des Terminals nötig. In Raspberry Pi OS kannst du in der Programmauswahl nach Terminal suchen, um es zu öffnen.  
+So sieht das Terminal in Raspberry Pi OS aus:
+
+![Screenshot Terminal](rsc/Screenshot_Terminal.png)
+
+Um dir den Einstieg zu vereinfachen, findest du im Folgenden eine Übersicht der wichtigsten Befehle. Um sie auszuführen musst du, nachdem du sie eingegeben hast, 'Enter' drücken.
 
 | Befehl | Beschreibung |
 | ------ | ------------ |
 | `ls` | listet die Inhalte des aktuellen Ordners auf |
 | `cd <Verzeichnis>` | wechselt in das angegebene Verzeichnis<br>(`..` für das nächst höhere Verzeichnis, auch Parent-Verzeichnis genannt) |
 | `sudo <Befehl>` | führt den angegebenen Befehl mit root-Rechten aus |
-| `ifconfig` | listet alle Netzwerk-Interfaces und IP-Adressen auf |
 | `nano <Datei>` | öffnet einen Texteditor zum Bearbeiten der angegebenen Datei |
 | `cat <Datei>` | gibt die Inhalte einer Datei im Terminal aus |
 | `curl <URL>` | gibt die Inhalte einer Website im Terminal aus |
@@ -111,6 +115,7 @@ Hier werden Dateisysteme von anderen Datenträgern (z.B. USB-Sticks) temporär g
 
 ## SSH
 Secure Shell (SSH) ist ein Protokoll, das einen sicheren Remote-Zugriff auf einen anderen Computer ermöglicht. In unserem Fall kann es dazu verwendet werden, auf den Raspberry Pi zuzugreifen, ohne einen Bildschirm oder andere Peripherie-Geräte anschließen zu müssen.
+SSH öffnet ein Terminalfenster an deinem PC, mit dem du den Remote-Rechner genauso bedienen kannst wie mit einem Terminalfenster, das direkt auf dem anderen Rechner geöffnet wurde.
 
 SSH bietet dir nur eine Kommandozeile ohne grafische Benutzeroberfläche an, was aber für viele Anwendungen ausreicht. Solltest du eine Remote-Verbindung mit grafischer Oberfläche benötigen, findest du [hier](https://www.raspberrypi.com/documentation/computers/remote-access.html) weitere Informationen.
 
@@ -121,7 +126,8 @@ Um eine Verbindung zu deinem Raspberry Pi aufbauen zu können, musst du zunächs
 hostname -I
 ```
 
-Weiterere Befehle, die für das Erhalten der IP-Adresse verwendet werden können, sind `ip addr show` und `ifconfig`. Der Text der von diesen Commands ausgegeben wird ist aber komplizierter, als die von `hostname`. Jedoch ist letzteres nicht in jeder Linux-Distribution enthalten, weshalb man die Alternativen kennen sollte.
+Weiterere Befehle, die für das Erhalten der IP-Adresse verwendet werden können, sind `ip addr show` und `ifconfig`. Der Text der von diesen Commands ausgegeben wird ist aber komplizierter, als die von `hostname`. Jedoch ist letzteres nicht in jeder Linux-Distribution enthalten, weshalb man die Alternativen kennen sollte.  
+Falls man keine Konsolenbefehle verwenden möchte, kann man auch in der Weboberfläche seines Routers die IP-Adressen der einzelnen Geräte nachsehen. Bei der Fritzbox geht das z. B. auf der Seite `fritz.box`.
 
 Solltest du kein Display an deinen Raspberry Pi angeschlossen haben, kannst du alternativ auch die Web-Oberfläche deines Routers verwenden, um über die Geräteliste die entsprechende IP-Adresse zu finden.
 
@@ -138,7 +144,7 @@ Dieser öffnet das Konfigurations-Tool des Raspberry Pi
 5. Wähle `Ok` aus
 6. Wähle `Finish` aus
 
-### Verbindung
+### Verbindungsaufbau
 Nachdem der SSH-Server aktiviert wurde, kannst du von einem anderen Computer aus mit dem folgenden Terminal-Befehl eine Verbindung herstellen:
 
 ```
