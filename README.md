@@ -5,18 +5,8 @@ Diese Einführung ist Teil des [Pre-Work-Pakets](../../../collection-it-prwrkpck
 ## Inhaltsverzeichnis
 1. [Was ist ein Raspberry Pi?](#was-ist-ein-raspberry-pi)
 2. [Erste Schritte](#erste-schritte)
-    - [Material](#material)
-    - [Aufsetzen des Raspberry Pi](#aufsetzen-des-raspberry-pi)
 3. [Linux Grundlagen](#linux-grundlagen)
-    - [Linux Kernel](#linux-kernel)
-    - [Terminal Basics](#terminal-basics)
-    - [Root-Rechte](#root-rechte)
-    - [Software verwalten](#software-verwalten)
-    - [Ordnerstruktur](#ordnerstruktur)
 4. [SSH](#ssh)
-    - [IP-Adresse herausfinden](#ip-adresse-herausfinden)
-    - [Setup des SSH-Servers](#setup-des-ssh-servers)
-    - [Verbindungsaufbau](#verbindungsaufbau)
 
 ## Was ist ein Raspberry Pi?
 > Raspberry Pi is an affordable way to do something useful, or to do something fun.  
