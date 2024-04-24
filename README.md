@@ -29,19 +29,19 @@ Um einen Raspberry Pi aufzusetzen, benötigst du Folgendes:
 Bevor du den Raspberry Pi verwenden kannst, musst du zunächst das Betriebssystem Raspberry Pi OS installieren. Lade dir hierzu den [Raspberry Pi Imager](https://www.raspberrypi.com/software) herunter und starte das Programm.
 
 Nun solltest du dieses Fenster vor dir sehen:
-![Screenshot Startseite](rsc/Screenshot_Startseite.png)
+![Screenshot Startseite](img/Screenshot_Startseite.png)
 
 Klicke auf "Modell wählen" und wähle den Raspberry Pi 5 aus, klicke dann unter "OS wählen" auf "Raspberry Pi OS (64-bit).  
 Zuletzt musst du noch die SD-Karte auswählen, auf die das Betriebssystem geschrieben werden soll. Klicke hierzu auf "SD-Karte wählen", stecke anschließend deine Micro SD Karte mit Hilfe des Micro SD auf USB Adapters in einen USB-Port deines Computers und wähle den Eintrag aus der Liste, der nun erschienen ist.
 
 Nach einem Klick auf die Schaltfläche "Weiter", die nun freigeschaltet sein sollte, erscheint folgender Dialog:
-![Screenshot OS Anpassung](rsc/Screenshot_OS_Anpassung.png)
+![Screenshot OS Anpassung](img/Screenshot_OS_Anpassung.png)
 
 Lehne mit einem Klick auf "Nein" die OS Anpassungen ab und bestätige die Warnung im folgenden Dialog mit "Ja".  
 **ACHTUNG**: Hierdurch werden alle Daten auf der SD-Karte überschrieben!
 
 Sobald der folgende Dialog erscheint, war das Schreiben erfolgreich und du kannst den Imager schließen und die Micro SD-Karte aus deinem Computer entfernen.
-![Screenshot Success](rsc/Screenshot_Success.png)
+![Screenshot Success](img/Screenshot_Success.png)
 
 Stecke nun die Micro SD-Karte in den entsprechenden Slot deines Raspberry Pis und schließe Maus, Tastatur und einen Monitor an. Anschließend kannst du auch die Stromversorgung anschließen, um deinen Pi das erste Mal zu starten. Bei diesem Startvorgang wirst du durch ein automatisches Setup geführt. Lies alle Punkte aufmerksam durch und folge den Anweisungen, um am Ende ein voll funktionsfähiges Betriebssystem zu erhalten.
 
@@ -58,7 +58,7 @@ Bei einem Kernel handelt es sich um den Kern des Betriebssystems. Er ist für di
 Auch wenn die meisten Linux-Distributionen heute über eine grafische Benutzeroberfläche verfügen, ist für manche Aufgaben dennoch die Verwendung des Terminals nötig. In Raspberry Pi OS kannst du in der Programmauswahl nach Terminal suchen, um es zu öffnen.  
 So sieht das Terminal in Raspberry Pi OS aus:
 
-![Screenshot Terminal](rsc/Screenshot_Terminal.png)
+![Screenshot Terminal](img/Screenshot_Terminal.png)
 
 Um dir den Einstieg zu vereinfachen, findest du im Folgenden eine Übersicht der wichtigsten Befehle. Um sie auszuführen musst du, nachdem du sie eingegeben hast, 'Enter' drücken.
 
